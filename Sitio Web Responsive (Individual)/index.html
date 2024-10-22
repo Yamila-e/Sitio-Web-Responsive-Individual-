@@ -1,0 +1,107 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Habilita el diseño responsive -->
+    <title>Sitio Responsivo</title> 
+
+    <!-- Importando Bootstrap CSS para estilos predefinidos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> <!-- Se vincula el archivo de estilos personalizados -->
+</head>
+<body>
+
+    <!-- Navbar (barra de navegación) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary"> <!-- La barra de navegación usa clases de Bootstrap para expandirse en pantallas grandes y ser oscura -->
+        <div class="container-fluid"> <!-- Contenedor fluido para ocupar el 100% del ancho de la pantalla -->
+          <a class="navbar-brand" href="#">LOREM IPSUM</a> <!-- Título de la barra de navegación -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- Botón hamburguesa para menús en pantallas pequeñas -->
+            <span class="navbar-toggler-icon"></span> <!-- Icono del menú hamburguesa -->
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav"> <!-- Menú colapsable (se oculta en pantallas pequeñas) -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Lista de enlaces en la barra de navegación -->
+              <li class="nav-item mx-5"> <!-- Primer enlace de la barra -->
+                <a class="nav-link active" aria-current="page" href="#">Dolor</a> 
+              </li>
+              <li class="nav-item mx-5"> <!-- Segundo enlace -->
+                <a class="nav-link" href="#">Sit</a> 
+              </li>
+              <li class="nav-item mx-5"> <!-- Tercer enlace -->
+                <a class="nav-link" href="#">Amet</a> 
+              </li>
+              <!-- Botón Opciones visible solo en pantallas pequeñas -->
+              <li class="nav-item mx-5 d-lg-none"> <!-- El botón de opciones solo aparece en pantallas pequeñas (d-lg-none) -->
+                <a class="nav-link" id="optionsBtn" href="#">Opciones</a> <!-- Botón para mostrar el menú de opciones -->
+              </li>
+            </ul>
+            <!-- Formulario de búsqueda dentro de la barra de navegación -->
+            <form class="d-flex"> <!-- El formulario es flexible (usando flexbox de Bootstrap) -->
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <!-- Campo de búsqueda -->
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Sección del carrusel, visible en pantallas grandes (LG) -->
+    <div class="text-center my-5 d-none d-lg-block"> <!-- El carrusel se centra y es visible solo en pantallas grandes (d-lg-block) -->
+        <h3>Lorem ipsum...</h3> <!-- Título encima del carrusel -->
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> <!-- Carrusel que cambia automáticamente cada 3 segundos -->
+            <div class="carousel-inner"> <!-- Contenedor de los ítems del carrusel -->
+                 <div class="carousel-item active" class="carousel-text"> <!-- Primer ítem del carrusel -->
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</h5> 
+                </div>
+                <div class="carousel-item" class="carousel-text"> <!-- Segundo ítem del carrusel -->
+                    <h5>...Optio recusandae, cumque voluptas dicta...</h5> 
+                </div>
+                <div class="carousel-item" class="carousel-text"> <!-- Tercer ítem del carrusel -->
+                    <h5>...expedita ex quam assumenda doloremque dolore labore! Dolore expedita rem voluptas!</h5> 
+                </div>
+            </div>
+            <!-- Botones de control del carrusel (anterior/siguiente) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Icono para ir al ítem anterior -->
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Icono para ir al ítem siguiente -->
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container"> <!-- Contenedor principal que utiliza el sistema de grillas de Bootstrap -->
+        <div class="row mx-md-4 mx-sm-1"> <!-- Definición de una fila con márgenes adaptativos para pantallas medianas y pequeñas -->
+            <!-- Menú de opciones visible en pantallas grandes -->
+            <div class="col-lg-3 col-md-12 d-none d-lg-block" id="optionsMenu"> <!-- Menú lateral solo visible en pantallas grandes (d-lg-block) -->
+                <div class="list-group"> <!-- Grupo de listas de opciones -->
+                    <button class="list-group-item list-group-item-action p-3"><a href="#" class="link-dark">Opción 1</a></button> <!-- Primer botón de opción -->
+                    <button class="list-group-item list-group-item-action p-3"><a href="#" class="link-dark">Opción 2</a></button> <!-- Segundo botón de opción -->
+                    <button class="list-group-item list-group-item-action p-3"><a href="#" class="link-dark">Opción 3</a></button> <!-- Tercer botón de opción -->
+                    <button class="list-group-item list-group-item-action p-3"><a href="#" class="link-dark">Opción 4</a></button> <!-- Cuarto botón de opción -->
+                </div>
+            </div>
+            <!-- Contenido de texto -->
+            <div class="col-lg-3 col-md-6 col-sm-12"> <!-- El texto ocupa diferentes columnas según el tamaño de la pantalla (adaptable) -->
+              <p class="bg-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis, tortor ac congue commodo, nisi neque bibendum elit, quis vulputate dolor augue ut mauris. tincidunt.</p>
+              <p class="bg-light">Mauris mattis porttitor erat, in pharetra risus fringilla lobortis. Vestibulum et ante commodo, imperdiet neque ac, tempus felis. Nullam sed pharetra purus. Donec sit amet ultricies nisi.</p>
+              <p class="bg-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quidem, doloremque maiores commodi dignissimos officia nobis ab, explicabo ducimus quasi dicta iure at perspiciatis accusamus ea natus ullam accusantium molestiae?</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12"> <!-- El texto ocupa diferentes columnas según el tamaño de la pantalla (adaptable) -->
+              <p class="bg-light">Phasellus eleifend semper tempor. Quisque mi lorem, laoreet eu urna sit amet, tempor volutpat est. Vestibulum lobortis nulla vel odio laoreet, iaculis rhoncus neque porttitor.</p>
+              <p class="bg-light">In mi velit, fringilla sed velit vel, ornare varius dui. Nunc viverra diam sit amet mollis posuere. Nulla semper odio in consectetur ornare.</p>
+              <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo exercitationem quidem reprehenderit? Corrupti eum perferendis nisi! Perferendis quisquam odit voluptatibus similique fugit veniam, nisi deserunt voluptas, eum hic, nostrum quo.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12"> <!-- El texto ocupa diferentes columnas según el tamaño de la pantalla (adaptable) -->
+              <p class="bg-light">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lectus ligula, ultricies ut nec, varius. In aliquet fringilla libero, quis dapibus massa tincidunt a. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+              <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex ipsum ab, reprehenderit veniam quidem fugit totam dolor repellendus quibusdam deserunt vero quia accusantium consequatur magni velit sed eos neque?</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Importar JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Importar JavaScript personalizado -->
+    <script src="script.js"></script> 
+</body>
+</html>
